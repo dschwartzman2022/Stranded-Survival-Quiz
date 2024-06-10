@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--Daniella Schwartzman-->
+  <meta charset="UTF-8">
+  <title>Stranded Survival Quiz</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<!--Intro message-->
+<body>
+  <div id="intro" class="quiz-container">
+    <div class="quiz-header">
+      <h1>Will you survive?</h1>
+      <p>You are stranded on an island after your boat capsized! Test your instincts and find out if you could survive 5 days of being stranded on an island.</p>
+      <button onclick="startQuiz()">Start</button>
+    </div>
+  </div>
+<!--quiz section with questions and options gives id to work with js-->
+  <div id="quiz" class="quiz-container" style="display: none;">
+    <div class="quiz-header">
+      <form id="quizForm">
+        <div class="question" id="question1">
+          <h2>Day 1 of being stranded... Do you:</h2>
+          <ul>
+            <li>
+              <input type="radio" id="q1a1" name="q1" value="explore">
+              <label for="q1a1">Explore</label>
+            </li>
+            <li>
+              <input type="radio" id="q1a2" name="q1" value="sleep">
+              <label for="q1a2">Sleep</label>
+            </li>
+            <li>
+              <input type="radio" id="q1a3" name="q1" value="water">
+              <label for="q1a3">Find water</label>
+            </li>
+            <li>
+              <input type="radio" id="q1a4" name="q1" value="na">
+              <label for="q1a4">None of the above</label>
+            </li>
+          </ul>
+          <button type="button" onclick="nextQuestion()">Next</button>
+        </div>
+
+        <div class="question" id="question2">
+          <h2>Day 2 of being stranded... Do you:</h2>
+          <ul>
+            <li>
+              <input type="radio" id="q2a1" name="q2" value="phone">
+              <label for="q2a1">Check for phone connection</label>
+            </li>
+            <li>
+              <input type="radio" id="q2a2" name="q2" value="shelter">
+              <label for="q2a2">Seek shelter</label>
+            </li>
+            <li>
+              <input type="radio" id="q2a3" name="q2" value="berries">
+              <label for="q2a3">Forage berries</label>
+            </li>
+            <li>
+              <input type="radio" id="q2a4" name="q2" value="reminisce">
+              <label for="q2a4">Reminisce</label>
+            </li>
+          </ul>
+          <button type="button" onclick="nextQuestion()">Next</button>
+        </div>
+
+        <div class="question" id="question3">
+          <h2>Day 3 of being stranded... Do you:</h2>
+          <ul>
+            <li>
+              <input type="radio" id="q3a1" name="q3" value="fire">
+              <label for="q3a1">Create a fire</label>
+            </li>
+            <li>
+              <input type="radio" id="q3a2" name="q3" value="sos">
+              <label for="q3a2">Draw SOS in the sand</label>
+            </li>
+            <li>
+              <input type="radio" id="q3a3" name="q3" value="swim">
+              <label for="q3a3">Swim</label>
+            </li>
+            <li>
+              <input type="radio" id="q3a4" name="q3" value="watch">
+              <label for="q3a4">Check your watch</label>
+            </li>
+          </ul>
+          <button type="button" onclick="nextQuestion()">Next</button>
+        </div>
+
+        <div class="question" id="question4">
+          <h2>Day 4 of being stranded... Do you:</h2>
+          <ul>
+            <li>
+              <input type="radio" id="q4a1" name="q4" value="pigs">
+              <label for="q4a1">Chase pigs</label>
+            </li>
+            <li>
+              <input type="radio" id="q4a2" name="q4" value="fishing">
+              <label for="q4a2">Go fishing</label>
+            </li>
+            <li>
+              <input type="radio" id="q4a3" name="q4" value="resources">
+              <label for="q4a3">Gather resources</label>
+            </li>
+            <li>
+              <input type="radio" id="q4a4" name="q4" value="dance">
+              <label for="q4a4">Dance</label>
+            </li>
+          </ul>
+          <button type="button" onclick="nextQuestion()">Next</button>
+        </div>
+
+        <div class="question" id="question5">
+          <h2>Day 5 of being stranded... Do you:</h2>
+          <ul>
+            <li>
+              <input type="radio" id="q5a1" name="q5" value="shout">
+              <label for="q5a1">Shout</label>
+            </li>
+            <li>
+              <input type="radio" id="q5a2" name="q5" value="journal">
+              <label for="q5a2">Journal on the leaves</label>
+            </li>
+            <li>
+              <input type="radio" id="q5a3" name="q5" value="clouds">
+              <label for="q5a3">Watch the clouds</label>
+            </li>
+            <li>
+              <input type="radio" id="q5a4" name="q5" value="swimm">
+              <label for="q5a4">Swim</label>
+            </li>
+          </ul>
+          <button type="button" onclick="showResult()">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+<!--result section-->
+  <div id="result" class="quiz-container" style="display: none;">
+    <div class="quiz-header">
+      <h2>Your Result:</h2>
+      <p id="resultText"></p>
+      <img id="resultImage" src="" alt="Result Image">
+      <button onclick="restartQuiz()">Restart</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
